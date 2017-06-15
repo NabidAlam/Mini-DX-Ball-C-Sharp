@@ -25,6 +25,11 @@ namespace Mini_DX_Ball_Game
             {
                 vdir = +1;
             }
+
+            else if (ball.Top>(this.Height- ball.Height-slider.Height))
+            {
+                vdir = -1;
+            }
         }
 
 
