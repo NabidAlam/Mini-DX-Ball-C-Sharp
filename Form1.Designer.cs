@@ -42,17 +42,18 @@
             // ball
             // 
             this.ball.Image = ((System.Drawing.Image)(resources.GetObject("ball.Image")));
-            this.ball.Location = new System.Drawing.Point(360, 107);
+            this.ball.Location = new System.Drawing.Point(360, 12);
             this.ball.Name = "ball";
-            this.ball.Size = new System.Drawing.Size(91, 88);
+            this.ball.Size = new System.Drawing.Size(65, 69);
             this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ball.TabIndex = 0;
             this.ball.TabStop = false;
             // 
             // slider
             // 
+            this.slider.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.slider.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.slider.Location = new System.Drawing.Point(360, 550);
+            this.slider.Location = new System.Drawing.Point(271, 534);
             this.slider.Name = "slider";
             this.slider.Size = new System.Drawing.Size(181, 16);
             this.slider.TabIndex = 1;
@@ -62,16 +63,24 @@
             // 
             vert.Tick += new System.EventHandler(this.vert_Tick);
             // 
+            // horz
+            // 
+            this.horz.Enabled = true;
+            this.horz.Interval = 1;
+            this.horz.Tick += new System.EventHandler(this.horz_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(886, 567);
+            this.ClientSize = new System.Drawing.Size(709, 551);
             this.Controls.Add(this.slider);
             this.Controls.Add(this.ball);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slider)).EndInit();
             this.ResumeLayout(false);
