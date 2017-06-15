@@ -16,5 +16,19 @@ namespace Mini_DX_Ball_Game
         {
             InitializeComponent();
         }
+
+        int vdir = +1;
+
+        private void vert_Tick(object sender, EventArgs e)
+        {
+            if (ball.Top<0)
+            {
+                vdir = +1;
+            }
+        }
+
+
+
+
     }
 }
