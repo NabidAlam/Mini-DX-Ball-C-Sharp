@@ -30,6 +30,33 @@ namespace Mini_DX_Ball_Game
             {
                 vdir = -1;
             }
+            else
+            {
+                ball.Top += vdir;
+   
+            }
+            
+        }
+
+
+        private int hdir = +1;
+
+        private void horz_Tick(object sender, EventArgs e)
+        {
+            if (ball.Left < 0)
+            {
+                hdir = +1;
+            }
+
+            else if (ball.Left > (this.Width-ball.Width) )
+            {
+                hdir = -1;
+            }
+
+            else
+            {
+                ball.Height += hdir;
+            }
         }
 
 
